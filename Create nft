@@ -1,0 +1,29 @@
+let nftCollection = [];
+
+function mintNFT (name, description,) {
+  let nft = {
+    name: name,
+    description: description,
+  };
+  nftCollection.push(nft);
+}
+
+function listNFTs () {
+  for (let i = 0; i < nftCollection.length; i++) {
+    console.log("Name: " + nftCollection[i].name);
+    console.log("Description: " + nftCollection[i].description);
+    console.log("------------------------");
+  }
+}
+
+function getTotalSupply() {
+  console.log("Total NFTs: " + nftCollection.length);
+}
+
+mintNFT("Aman", "This is HR");
+mintNFT("Sambhav", "This is MANAGER");
+mintNFT("Uddeshya", "This is CEO");
+
+listNFTs();
+
+getTotalSupply();
